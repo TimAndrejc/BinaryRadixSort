@@ -27,7 +27,7 @@ void Izpis_Stevil(int* polje, unsigned int velikost) {
 		output << polje[i] << ' ';
 }
 
-void BinaryRadix(int* polje, unsigned int velikost) {
+void BitRadixSort(int* polje, unsigned int velikost) {
 	int * D = new int[velikost];
 	for (int k = 0; k<8; k++) {
 		for (int i = 0; i < velikost; i++) {
