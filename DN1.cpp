@@ -53,7 +53,7 @@ void BitRadix(int* polje, unsigned int velikost) {
 int main(int argc, const char* argv[]) {
 	vector<int> A;
 
-	//if (argc < 2) return 0;
+	///if (argc < 2) return 0;
 	if (!Branje_Stevil(A, "input.txt")) return 0;
 
 	BitRadix(&A[0], A.size());
