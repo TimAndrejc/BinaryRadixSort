@@ -56,7 +56,7 @@ int main(int argc, const char* argv[]) {
 	//if (argc < 2) return 0;
 	if (!Branje_Stevil(A, "input.txt")) return 0;
 
-	//BinaryRadix(&A[0], A.size());
+	BitRadix(&A[0], A.size());
 
 	Izpis_Stevil(&A[0],A.size());
 
