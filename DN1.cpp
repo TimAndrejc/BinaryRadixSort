@@ -53,9 +53,10 @@ void BitRadixSort(int* polje, unsigned int velikost) {
 int main(int argc, const char* argv[]) {
 	vector<int> A;
 
-	if (argc < 2) return 0;
-	if (!Branje_Stevil(A, argv[1])) return 0;
+	//if (argc < 2) return 0;
+	if (!Branje_Stevil(A, "input.txt")) return 0;
 
+	BitRadixSort(&A[0], A.size());
 	Izpis_Stevil(&A[0],A.size());
 
 	return 0;
