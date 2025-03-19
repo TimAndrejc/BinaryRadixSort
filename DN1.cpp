@@ -28,7 +28,26 @@ void Izpis_Stevil(int* polje, unsigned int velikost) {
 }
 
 void BinaryRadix(int* polje, unsigned int velikost) {
-
+	int * D = new int[velikost];
+	for (int k = 0; k<8; k++) {
+		for (int i = 0; i < velikost; i++) {
+			D[i] =  (polje[i] >> k) & 1;
+		}
+		for (int i = 0; i < velikost; i++) {
+			int changes = 0;
+			for (int j = 0; j < velikost -1; j++) {
+				if (D[j] > D[j + 1]) {
+					swap(D[j], D[j + 1]);
+					swap(polje[j], polje[j + 1]);
+					changes++;
+				}
+			}
+			if (changes == 0) {
+				break;
+			}
+		}
+	}
+	delete [] D;
 }
 
 int main(int argc, const char* argv[]) {
